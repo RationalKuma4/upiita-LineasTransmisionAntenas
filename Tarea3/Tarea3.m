@@ -24,21 +24,21 @@ Zs=(Vs./Is);
 
 figure (1);
 subplot(3,1,1);
-plot(s,abs(Vs));
+plot(s,abs(Vs),'k','LineWidth',1.1);
 title('$Voltaje$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$V(s)$','Interpreter','latex');
 grid on;
 
 subplot(3,1,2);
-plot(s,abs(Is));
+plot(s,abs(Is),'k','LineWidth',1.1);
 title('$Corriente$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$I(s)$','Interpreter','latex');
 grid on;
 
 subplot(3,1,3);
-plot(s,abs(Zs));
+plot(s,abs(Zs),'k','LineWidth',1.1);
 title('$Impedancia$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$Z(s)$','Interpreter','latex');
@@ -54,21 +54,21 @@ Zs=(Vs./Is);
 
 figure(2);
 subplot(3,1,1);
-plot(s,abs(Vs));
+plot(s,abs(Vs),'k','LineWidth',1.1);
 title('$Voltaje$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$V(s)$','Interpreter','latex');
 grid on;
 
 subplot(3,1,2);
-plot(s,abs(Is));
+plot(s,abs(Is),'k','LineWidth',1.1);
 title('$Corriente$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$I(s)$','Interpreter','latex');
 grid on;
 
 subplot(3,1,3);
-plot(s,abs(Zs));
+plot(s,abs(Zs),'k','LineWidth',1.1);
 title('$Impedancia$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$Z(s)$','Interpreter','latex');
@@ -85,21 +85,21 @@ Zs=(Vs./Is);
 
 figure(3);
 subplot(3,1,1);
-plot(s,abs(Vs));
+plot(s,abs(Vs),'k','LineWidth',1.1);
 title('$Voltaje$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$V(s)$','Interpreter','latex');
 grid on;
 
 subplot(3,1,2);
-plot(s,abs(Is));
+plot(s,abs(Is),'k','LineWidth',1.1);
 title('$Corriente$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$I(s)$','Interpreter','latex');
 grid on;
 
 subplot(3,1,3);
-plot(s,abs(Zs));
+plot(s,abs(Zs),'k','LineWidth',1.1);
 title('$Impedancia$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$Z(s)$','Interpreter','latex');
@@ -113,23 +113,23 @@ Zs=(Vs./Is);
 
 figure(4);
 subplot(3,1,1);
-plot(s,abs(Vs));
+plot(s,abs(Vs),'k','LineWidth',1.1);
 title('$Voltaje$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$V(s)$','Interpreter','latex');
 grid on;
 
 subplot(3,1,2);
-plot(s,abs(Is));
+plot(s,abs(Is),'k','LineWidth',1.1);
 title('$Corriente$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$I(s)$','Interpreter','latex');
 grid on;
 
 subplot(3,1,3);
-plot(s,abs(Zs));
+plot(s,abs(Zs),'k','LineWidth',1.1);
 title('$Impedancia$','Interpreter','latex');
 xlabel('$\lambda$','Interpreter','latex');
 ylabel('$Z(s)$','Interpreter','latex');
 grid on;
-suptitle('Linea terminada en c.c. con perdidas')
+suptitle('Linea terminada en c.a. con perdidas')

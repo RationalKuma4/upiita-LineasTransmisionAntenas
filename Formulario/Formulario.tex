@@ -15,7 +15,7 @@
 \usepackage{capt-of}
 \usepackage[colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
 
-\marginsize{2cm}{2cm}{2cm}{2cm}
+\marginsize{1cm}{1cm}{1cm}{1cm}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\footnotesize UPIITA-IPN} 
@@ -30,9 +30,105 @@
 
 \newpage
 \section{Lineas de transmision}
+
+\subsection{Lineas desacopladas}
+
+Voltaje y corriente con origen en la carga en una linea sin perdidas
 \begin{equation}
-    E=m
+    V(s)=Vo^{+}(e^{j \beta s}+\Gamma(0)e^{-j \beta s})
 \end{equation}
+
+\begin{equation}
+    I(s)=\frac{Vo^{+}}{z_0}(e^{j \beta s}-\Gamma(0)e^{-j \beta s})
+\end{equation}
+
+Impedancia en cualquier punto de la linea cuando se tiene $z_0$ y $s_L$
+\begin{equation}
+    z(s)=z_{0}(\frac{z_{L}+jz_{0}\tan(\beta s)}{z_{0}+jz_{L}\tan(\beta s)})
+\end{equation}
+
+\begin{equation}
+    \beta s=\frac{2 \pi s}{\lambda} [rads]
+\end{equation}
+
+\begin{equation}
+    \beta s=\frac{2 \pi s}{\lambda}
+\end{equation}
+
+Relacion de onda estacionaria $ROE$
+\begin{equation}
+    ROE=\frac{R_{max}}{z_0}
+\end{equation}
+
+\begin{equation}
+    ROE=\frac{z_0}{R_{min}}
+\end{equation}
+
+Impedancia caracteristica de la linea $z_{0}$ cuando se conocen las resistencias
+\begin{equation}
+    z_{0}=\sqrt{R_{max} R_{min}}
+\end{equation}
+
+$\theta_{2}$ Linea completa y $\theta_{1}$ distancia de la resistencia hasta $z_{L}$
+\begin{equation}
+    \theta=\theta_2-\theta_1
+\end{equation}
+
+Cuando se conoce la resistencia minima - $R_{min}$
+\begin{equation}
+    z_{int}(s)=z_{0}(\frac{R_{min}+jz_{0}\tan(\theta)}{z_{0}+jR_{min}\tan(\theta)})
+\end{equation}
+
+\begin{equation}
+    z_{int}(s)=z_{0}(\frac{ROE+j\tan(\theta)}{1+jROE\tan(\theta)})
+\end{equation}
+
+Cuando se conoce la resistencia maxima - $R_{max}$
+\begin{equation}
+    z_{int}(s)=z_{0}(\frac{R_{max}+jz_{0}\tan(\theta)}{z_{0}+jR_{max}\tan(\theta)})
+\end{equation}
+
+\begin{equation}
+    z_{int}(s)=z_{0}(\frac{ROE+j\tan(\theta)}{1+jROE\tan(\theta)})
+\end{equation}
+
+\subsection{Impedancia y Admitancia normalizada}
+Normalizacion
+\begin{equation}
+    z(s)=R+jX
+\end{equation}
+
+\begin{equation}
+    \frac{z(s)}{z_0}=z(s)=\hat{z}=r+jx
+\end{equation}
+
+\begin{equation}
+    \hat{z}=r+jx=\frac{1+\Gamma(s)}{1-\Gamma(s)}
+\end{equation}
+
+Impedancia normalizada para la carta de Smith
+\begin{equation}
+    \hat{z}=\frac{1+\Gamma(s)e^{-2 \gamma s}}{1-\Gamma(s)e^{-2 \gamma s}}
+\end{equation}
+
+Admitancia y coeficiente de reflexion sin perdidas normalizada
+\begin{equation}
+    \hat{y}=\frac{1}{z}=\frac{1-\Gamma(s)}{1+\Gamma(s)}
+\end{equation}
+
+\begin{equation}
+    \Gamma(s)=\frac{\hat{z}-1}{\hat{z}+1}=\frac{1-\hat{y}}{1+\hat{y}}
+\end{equation}
+
+Admitancia y coeficiente de reflexion con perdidas normalizada
+\begin{equation}
+    \hat{y}=\frac{1-\Gamma(s)e^{-2 \gamma s}}{1+\Gamma(s)e^{-2 \gamma s}}
+\end{equation}
+
+\begin{equation}
+    \Gamma(s)e^{-2 \gamma s}=\frac{\hat{z}-1}{\hat{z}+1}
+\end{equation}
+
 
 
 \end{document}

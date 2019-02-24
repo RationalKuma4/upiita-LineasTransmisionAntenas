@@ -31,7 +31,46 @@
 \newpage
 \section{Lineas de transmision}
 
+\subsection{Perdida de retorno en una linea de transmisión}
+
+Potencia promedio
+\begin{equation}
+    P_{prom}=\frac{1}{2}\frac{(V_{0}^{+})^{2}}{z_0}(1-|\Gamma(0)|^{2})
+\end{equation}
+
+Perdida de retorno
+\begin{equation}
+    RL=-20\log_{10}(|\Gamma(0)|)
+\end{equation}
+
 \subsection{Lineas desacopladas}
+
+Igualdad $Np$ a $dB$
+\begin{equation}
+    1 N_p=8.68 dB
+\end{equation}
+
+Coeficiente de reflexion en la carga
+\begin{equation}
+    \Gamma(0)=\frac{z_L-z_0}{z_L+z_0}
+\end{equation}
+
+\begin{equation}
+    |\Gamma(0)|=\frac{ROE-1}{ROE+1}
+\end{equation}
+
+\begin{equation}
+    V(s)=V_{0}^{+}(e^{\gamma s}+\Gamma(0)e^{-\gamma s})
+\end{equation}
+
+\begin{equation}
+    I(s)=\frac{Vo^{+}}{z_0}(e^{\gamma s}-\Gamma(0)e^{-\gamma s})
+\end{equation}
+
+Impedancia de entrada
+\begin{equation}
+    Z_{int}(0)=z_0(\frac{1+\Gamma(0)e^{-2 \gamma s}}{1-\Gamma(0)e^{-2 \gamma s}})
+\end{equation}
 
 Voltaje y corriente con origen en la carga en una linea sin perdidas
 \begin{equation}
@@ -47,12 +86,9 @@ Impedancia en cualquier punto de la linea cuando se tiene $z_0$ y $s_L$
     z(s)=z_{0}(\frac{z_{L}+jz_{0}\tan(\beta s)}{z_{0}+jz_{L}\tan(\beta s)})
 \end{equation}
 
+Grados electricos
 \begin{equation}
-    \beta s=\frac{2 \pi s}{\lambda} [rads]
-\end{equation}
-
-\begin{equation}
-    \beta s=\frac{2 \pi s}{\lambda}
+    \beta s=\frac{2 \pi s}{\lambda} [rads] 
 \end{equation}
 
 Relacion de onda estacionaria $ROE$
@@ -80,7 +116,7 @@ Cuando se conoce la resistencia minima - $R_{min}$
 \end{equation}
 
 \begin{equation}
-    z_{int}(s)=z_{0}(\frac{ROE+j\tan(\theta)}{1+jROE\tan(\theta)})
+    z_{int}(s)=z_{0}(\frac{1+jROE\tan(\theta)}{ROE+j\tan(\theta)})
 \end{equation}
 
 Cuando se conoce la resistencia maxima - $R_{max}$

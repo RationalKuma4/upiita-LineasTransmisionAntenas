@@ -1,4 +1,0 @@
-\babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Lineas de transmision}{2}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}Lineas desacopladas}{2}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}Impedancia y Admitancia normalizada}{3}{subsection.1.2}% 

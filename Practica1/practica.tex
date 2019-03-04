@@ -1,0 +1,138 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{anysize} 
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{pdfpages}
+\usepackage{graphics}
+\usepackage{capt-of}
+\usepackage{tabularx}
+\usepackage[colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+
+\marginsize{2cm}{2cm}{2cm}{2cm}
+\pagestyle{fancy}
+\fancyhf{Líneas de transmisión y antenas}
+\fancyhead[L]{\footnotesize UPIITA-IPN} 
+\fancyhead[R]{\footnotesize 3TV1} 
+\fancyfoot[R]{\footnotesize Práctica 1}
+\fancyfoot[C]{\thepage}
+\fancyfoot[L]{\footnotesize Carta de Smith} 
+
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\spanishtablename}{Tabla}
+\renewcommand{\labelitemii}{$\star$}
+
+\begin{document}
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+\section{Balun}
+Un balun es un dispositivo que une una línea balanceada (una que tiene dos conductores, 
+con corrientes iguales en direcciones opuestas, como un cable de par trenzado) a una 
+línea no balanceada (una que tiene sólo un conductor y una tierra, como un cable coaxial). 
+Un balun es un tipo de transformador: se utiliza para convertir una señal no balanceada 
+en balanceada o viceversa. Los baluns aíslan una línea de transmisión y proporcionan una 
+salida balanceada. Un uso típico para un balun es en una antena de televisión. El término 
+se deriva de la combinación de equilibrado y desequilibrado.
+\\ \\
+En un balun, un par de terminales está equilibrado, es decir, las corrientes son iguales 
+en magnitud y opuestas en fase. El otro par de terminales está desequilibrado; un lado 
+está conectado a tierra eléctrica y el otro lleva la señal.
+\\ \\
+Hay dos variaciones de este dispositivo:
+\begin{itemize}
+    \item El unun, que transfiere la señal de una línea desequilibrada a otra.
+    \item El balbal, que transfiere la señal de una línea balanceada a otra.
+\end{itemize}
+Para funcionar con una eficiencia óptima, un balun debe utilizarse con cargas cuyas 
+impedancias presentan poca o ninguna reactancia. Tales impedancias son llamadas 
+"puramente resistivas".  Como regla general, las antenas de comunicaciones bien 
+diseñadas presentan cargas puramente resistivas de 50, 75 o 300 $\Omega$, aunque unas 
+pocas antenas tienen impedancias resistivas más altas.
+\\ \\
+Algunos baluns pueden funcionar como un transformador de impedancia entre dos sistemas 
+desequilibrados si hay poca o ninguna reactancia. 
+
+\section{Aplicaciones}
+Los transformadores de balun se pueden utilizar entre varias partes de un sistema de 
+comunicaciones por cable o inalámbrico. La siguiente tabla denota algunas aplicaciones 
+comunes.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Equilibrado} & \textbf{Desequilibrado} \\ \hline
+    Receptor de televisión & Red de cable coaxial \\ \hline
+    Receptor de televisión & Sistema de antena coaxial \\ \hline
+    Receptor de radiodifusión FM & Sistema de antena coaxial \\ \hline
+    Antena dipolo & Línea de transmisión coaxial \\ \hline
+    Línea de transmisión de cable paralelo & Salida del transmisor coaxial \\ \hline
+    Línea de transmisión de cable paralelo & Entrada para receptor coaxial \\ \hline
+    Línea de transmisión de cable paralelo & Línea de transmisión coaxial \\ \hline
+    \end{tabular}
+    \caption{Aplicaciones.}
+\end{table}
+
+\section{Cálculos}
+Impedancia característica de la línea.
+\begin{equation}
+    Z_0=200 \ \Omega
+\end{equation}
+Coeficiente de reflexión.
+\begin{equation}
+    \Gamma(0)=\frac{Z_L-Z_0}{Z_0+Z_L}
+\end{equation}
+%Potencia promedio.
+%\begin{equation}
+%    P_{prom}=||\Gamma(0)||^{2}
+%\end{equation}
+Perdida de retorno.
+\begin{equation}
+    RL=-10\log_{10} (|\Gamma(0)|^{2})
+\end{equation}
+
+\subsection{$Z_L=47 \Omega$}
+\begin{equation}
+    \Gamma(0)=\frac{47-200}{47+200}=-0.6194
+\end{equation}
+\begin{equation}
+    |\Gamma(0)|^{2}=0.836
+\end{equation}
+\begin{equation}
+    RL=-10\log_{10} (-0.6194^{2})=4.1605
+\end{equation}
+
+\subsection{$Z_L=220 \Omega$}
+\begin{equation}
+    \Gamma(0)=\frac{220-200}{220+200}=0.0476
+\end{equation}
+\begin{equation}
+    |\Gamma(0)|^{2}=0.0022
+\end{equation}
+\begin{equation}
+    RL=-10\log_{10} (0.0476^{2})=26.4478
+\end{equation}
+
+\subsection{$Z_L=270 \Omega$}
+\begin{equation}
+    \Gamma(0)=\frac{270-200}{270+200}=0.1489
+\end{equation}
+\begin{equation}
+    |\Gamma(0)|^{2}=0.0221
+\end{equation}
+\begin{equation}
+    RL=-10\log_{10} (0.1489^{2})=4.1605=16.5421
+\end{equation}
+
+\end{document}

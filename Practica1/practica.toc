@@ -5,3 +5,4 @@
 \contentsline {subsection}{\numberline {3.1}$Z_L=47 \Omega $}{3}{subsection.3.1}% 
 \contentsline {subsection}{\numberline {3.2}$Z_L=220 \Omega $}{3}{subsection.3.2}% 
 \contentsline {subsection}{\numberline {3.3}$Z_L=270 \Omega $}{3}{subsection.3.3}% 
+\contentsline {section}{\numberline {4}Resultados}{4}{section.4}% 

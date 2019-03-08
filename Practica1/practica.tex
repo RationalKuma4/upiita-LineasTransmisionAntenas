@@ -30,10 +30,10 @@
 \renewcommand{\labelitemii}{$\star$}
 
 \begin{document}
-\newpage
-\tableofcontents
-\listoffigures
-\listoftables
+%\newpage
+%\tableofcontents
+%\listoffigures
+%\listoftables
 
 \newpage
 \section{Balun}
@@ -93,16 +93,19 @@ Coeficiente de reflexión.
 \begin{equation}
     \Gamma(0)=\frac{Z_L-Z_0}{Z_0+Z_L}
 \end{equation}
-%Potencia promedio.
-%\begin{equation}
-%    P_{prom}=||\Gamma(0)||^{2}
-%\end{equation}
+Potencia promedio.
+\begin{equation}
+    P_{prom}=||\Gamma(0)||^{2}
+\end{equation}
 Perdida de retorno.
 \begin{equation}
     RL=-10\log_{10} (|\Gamma(0)|^{2})
 \end{equation}
 
 \subsection{$Z_L=47 \Omega$}
+\begin{equation}
+    \hat{Z}=\frac{Z_L}{Z_0}=\frac{47}{200}=2.35
+\end{equation}
 \begin{equation}
     \Gamma(0)=\frac{47-200}{47+200}=-0.6194
 \end{equation}
@@ -115,6 +118,9 @@ Perdida de retorno.
 
 \subsection{$Z_L=220 \Omega$}
 \begin{equation}
+    \hat{Z}=\frac{Z_L}{Z_0}=\frac{220}{200}=2.35
+\end{equation}
+\begin{equation}
     \Gamma(0)=\frac{220-200}{220+200}=0.0476
 \end{equation}
 \begin{equation}
@@ -126,13 +132,30 @@ Perdida de retorno.
 
 \subsection{$Z_L=270 \Omega$}
 \begin{equation}
+    \hat{Z}=\frac{Z_L}{Z_0}=\frac{270}{200}=1.35
+\end{equation}
+\begin{equation}
     \Gamma(0)=\frac{270-200}{270+200}=0.1489
 \end{equation}
 \begin{equation}
     |\Gamma(0)|^{2}=0.0221
 \end{equation}
 \begin{equation}
-    RL=-10\log_{10} (0.1489^{2})=4.1605=16.5421
+    RL=-10\log_{10} (0.1489^{2})=16.5421
 \end{equation}
+
+\section{Resultados}
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+    \hline
+    $Z_L \ [\Omega] $ & $Z_0 \ [\Omega] $ & $\hat{Z}$ & $\hat{Y}$ & $l \ [\lambda] $ & $s \ [\lambda] $ & $\Gamma(0)$ & RL &  \\ \hline
+    47 & 200 & 0.235 & 0.7407 & & & 0.6194 & 4.1605 &    \\ \hline
+    200 & 200 & 1.1 & 0.909 & & & 0.0476 & 26.4478 &    \\ \hline
+    200 & 200 & 1.35 & 4.255 & & & 0.1489 & 16.5421 &    \\ \hline
+    \end{tabular}
+    \caption{My caption}
+    \label{my-label}
+\end{table}
 
 \end{document}

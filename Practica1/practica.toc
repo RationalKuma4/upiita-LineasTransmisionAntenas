@@ -1,8 +1,0 @@
-\babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Balun}{2}{section.1}% 
-\contentsline {section}{\numberline {2}Aplicaciones}{2}{section.2}% 
-\contentsline {section}{\numberline {3}C\IeC {\'a}lculos}{3}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}$Z_L=47 \Omega $}{3}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}$Z_L=220 \Omega $}{3}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}$Z_L=270 \Omega $}{3}{subsection.3.3}% 
-\contentsline {section}{\numberline {4}Resultados}{4}{section.4}% 

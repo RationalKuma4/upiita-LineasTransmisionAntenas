@@ -3,7 +3,6 @@ close all;
 clc;
 
 teta=0:.001:2*pi;
-
 %% 
 F1=(cos(3*pi/2*(cos(teta))))./(sin(teta));
 vMax1=max(F1);
@@ -13,15 +12,19 @@ figure(1);
 plot(teta,F1,teta,F1n);
 grid on;
 legend('F','Fn');
+figure(2);
+polarplot(teta,F1n);
 
 %%
-teta2=.001:.001:2*pi+.001;
+teta2=.001:.001:pi+.001;
 F2=(cos(5*pi/2*(cos(teta2))))./(sin(teta2));
 vMax2=max(F2);
 F2n=(cos(5*pi/2*(cos(teta2))))./(sin(teta2)).*(1./vMax2);
 
-figure(2);
+figure(3);
 plot(teta2,F2,teta2,F2n);
 grid on;
 legend('F','Fn');
+figure(4);
+polarplot(teta2,F2n);
 

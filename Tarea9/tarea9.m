@@ -5,7 +5,7 @@ close all;
 N=10;
 lambda=1;
 beta=2*pi/lambda;
-teta=.001:.001:pi-.001;
+teta=.001:.001:2*pi-.001;
 
 %% 1/4
 d=1/4;

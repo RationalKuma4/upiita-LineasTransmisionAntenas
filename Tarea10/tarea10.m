@@ -18,7 +18,6 @@ sum = 0;
 for cont = 1:N
     sum = sum + exp((j*2*pi*a)*(sin(theta).*cos(phi-phi_n(cont)) - sin(theta_0)*cos(phi_0-phi_n(cont))));
 end
-
 fa = abs(sum);
 figure(1)
 %plot(theta*180/pi,fa);

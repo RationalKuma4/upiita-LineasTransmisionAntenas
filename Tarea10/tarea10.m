@@ -22,12 +22,8 @@ end
 fa = abs(sum);
 figure(1)
 %plot(theta*180/pi,fa);
-polar(theta,fa);
-grid on;
-xlabel('\theta [Grados]')
-ylabel('|F.A.|')
-
-% -------------------------------------------------------------------------
+polar(theta,fa,'r.');
+%% -------------------------------------------------------------------------
 
 [xx yy] = meshgrid(theta,phi);
 sum = 0;
@@ -40,26 +36,26 @@ fa = abs(sum);
 
 figure(2)
 %plot(theta,fa)
-mesh(X*180/pi,Y*180/pi,Z)
+mesh(X*180/pi,Y*180/pi,Z);
 %mesh(xx*180/pi,yy*180/pi,fa);
-xlabel('\theta [Grados]')
-ylabel('\phi [Grados]')
-zlabel('|F.A.|')
+xlabel('\theta')
+ylabel('\phi ')
+zlabel('F.A.')
 
 % -------------------------------------------------------------------------
 
-theta = (-pi/2):1/100:(pi/2);
-% theta = 0:1/50:2*pi;
-phi = 0:1/50:2*pi;
-sum = 0;
-for cont = 1:N
-    sum = sum + exp((j*2*pi*a)*(sin(theta).*cos(phi-phi_n(cont)) - sin(theta_0)*cos(phi_0-phi_n(cont))));
-end
-
-fa = abs(sum);
-figure(3)
-plot(theta*180/pi,fa);
-% polar(theta,fa);
-grid on;
-xlabel('\theta [Grados]')
-ylabel('|F.A.|')
+% theta = (-pi/2):1/100:(pi/2);
+% % theta = 0:1/50:2*pi;
+% phi = 0:1/50:2*pi;
+% sum = 0;
+% for cont = 1:N
+%     sum = sum + exp((j*2*pi*a)*(sin(theta).*cos(phi-phi_n(cont)) - sin(theta_0)*cos(phi_0-phi_n(cont))));
+% end
+% 
+% fa = abs(sum);
+% figure(3)
+% plot(theta*180/pi,fa);
+% % polar(theta,fa);
+% grid on;
+% xlabel('\theta [Grados]')
+% ylabel('|F.A.|')
